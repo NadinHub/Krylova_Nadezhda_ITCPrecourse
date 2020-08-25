@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ITC Precourse</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./style.css" rel="stylesheet"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap"
+            rel="stylesheet">
+        <!-- Font Awesome fonts-->
+        <script src="https://kit.fontawesome.com/42bc4d0f17.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--<nav> <ul> <li> <a href="index.html" alt="Main">Home</a></li> <li> <a
+        href="about.html">About</a></li> <li> <a href="contact.html">Contact</a></li>
+        </ul> </nav> -->
+        <nav>
+            <a href="index.html" alt="Main">Home</a>
+            <a class="nav__middle-buttom" href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="page-wrapper-contact">
+            <h2>Contact</h2>
+            <div class="contact-wrapper">
+                <form id="frm1" action="" class="contact-form" ;=";" method="POST">
+                    <input type="hidden" name="send_to" value="nadezhda.krylova@gmail.com">
+                    <fieldset>
+                        <legend>
+                            Contact form</legend>
+                        <label for="firstname">First name</label>
+                        <input
+                            type="text"
+                            id="firstname"
+                            name="firstname"
+                            placeholder="Name"
+                            required="required">
+
+                        <label for="lastname">Last name</label>
+                        <input type="text" id="larstname" name="larstname" placeholder="Surname">
+
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="info@gmail.com"
+                            required="required">
+
+                        <label for="phone">Your phone number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+9720545300000"
+                            required="required">
+
+                        <label for="comment">Comment</label>
+                        <textarea
+                            id="comment"
+                            name="comment"
+                            placeholder="You are amazing!"
+                            required="required"></textarea>
+
+                        <label>
+                            <input type="checkbox" value="subscribe" name="subscribe" checked="checked">
+                            Add me to your email list!
+                        </label>
+
+                    </fieldset>
+                    <input class="button" type="button" onclick="myFunction()" value="Submit">
+                    <!-- <button class="button" type="submit">Submit</button> -->
+                </form>
+                <script>
+                    function myFunction() {
+                        document
+                            .getElementById("frm1")
+                            .submit();
+                    }
+                </script>
+
+            </div>
+        </div>
+        <!-- 
+        10. On the "Contact" page, create a contact form. The form should contain inputs for first name, last name, email, comment. There should be an additional input type where the user can enter additional information in a non text form.
+        Research about different input types, and implement creatively one of them. All fields except the "last name" field should be required. 
+
+        11. Add a submit button
+        to your form. When the submit button is clicked, the browser's console should
+        neatly display the details entered into the form in the following format: First
+        Name : ___, Last Name: ____, Email: ____, Comment: ____, Your Input: ____.
+        Replace "Your Input" with a name corresponding to what you actually choose to
+        implement. 
+        
+        12. The submit button should not be functional and should look
+        disabled as long as the required fields are not filled in.-->
+        <footer>
+            <div class="footer-class">
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/krylova-nadezhda" ;=";">
+                            <i class="fab fa-linkedin fa-3x"></i>
+                        </a>
+                    <li>
+                        <a href="https://github.com/NadinHub" ;=";">
+                            <i class="fab fa-github-square fa-3x"></i>
+                        </a>
+                    <li>
+                        <a href="https://stackoverflow.com/users/14105303/nadine" ;=";">
+                            <i class="fab fa-stack-overflow fa-3x"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer_text">&#169; Israel Tech Challenge</div>
+            </div>
+        </footer>
+        <script src="portfolio.js"></script>
+    </body>
+</html>
