@@ -26,16 +26,26 @@ let mapGal = [
 ]
 // const mapGalery = document.querySelectorAll('#map');
 // let currentlySelected = 0;
-
-nextBtn.addEventListener('click', function() {
-  document.getElementById('map').src=mapGal[1];
+let i = 0;
+function FunctionNext() {
+  if (i<2) {i++};
+  prevBtn.disabled = false;
+  document.getElementById('map').src=mapGal[i];
   prevBtn.removeAttribute ('disabled');
-})
+  if (i==2) {
+    nextBtn.disabled = true;
+  }
+}
+nextBtn.addEventListener('click', FunctionNext)
+
 prevBtn.addEventListener('click', function() {
-  document.getElementById('map').src=mapGal[0];
+  if (i>0) {i--};
+  nextBtn.disabled = false;
+  document.getElementById('map').src=mapGal[i];
+  if (i==0) {
   prevBtn.disabled = true;
+  }
 })
-if (mapGal.length === 0)
 // function showPrevMap() {
 //   document.getElementById('map').src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190029.0177344275!2d12.395913379380191!3d41.90998597307767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2sRome%2C%20Metropolitan%20City%20of%20Rome%2C%20Italy!5e0!3m2!1sen!2sru!4v1598695083348!5m2!1sen!2sru';
 //   document.getElementById('prev').style.display = 'none';
@@ -46,9 +56,9 @@ if (mapGal.length === 0)
 //   document.getElementById('prev').removeAttribute ('disabled');
 // document.getElementById('prev').style.display = 'inline-block'; }
 
-function showMoscow() {
-  document.getElementById('map').src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577336.7617527427!2d36.82516238321753!3d55.58074822793288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2sMoscow%2C%20Russia!5e0!3m2!1sen!2sus!4v1597502484149!5m2!1sen!2sus';
-}
+// function showMoscow() {
+//   document.getElementById('map').src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577336.7617527427!2d36.82516238321753!3d55.58074822793288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2sMoscow%2C%20Russia!5e0!3m2!1sen!2sus!4v1597502484149!5m2!1sen!2sus';
+// }
 
 // const firstName = firstName
 // function showInConsole() {
