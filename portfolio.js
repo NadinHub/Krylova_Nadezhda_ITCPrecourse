@@ -1,21 +1,36 @@
 // const GITHUB_URL = "https://api.github.com/users/IsraelTechChallengeITC";
 
-// const GITHUB_URL = "https://github.com/NadinHub.png";
+const GITHUB_URL = "https://api.github.com/users/NadinHub";
 
-// fetch(GITHUB_URL)
-//   .then(function(response) {
-//     return response.json();
-//   })
-//   .then(function(data) {
-//   const profileImage = document.getElementById("profile-image");
-//   profileImage.src = data.avatar_url;
-//   });
+fetch(GITHUB_URL)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+  const profileImage = document.getElementById("profile-image");
+  profileImage.src = data.avatar_url;
+
+  const profileName = document.getElementById ("my-name");
+  document.createElement('h1')
+  profileName.h1 = data.name_url;
+  // document.querySelector('.card').appendChild(profileImage);
+  })
+  
+// function fOnMouse() {
+//   const card1 = document.getElementById("card-wrapper");
+//   card1.addEventListener(onmouseover,fOnMouse)
+
+let AList = [
+  "HTML", "CSS", "JavaScript"
+]
 
 //   // const profileImage = document.getElementById("profile-image");
 //   // profileImage.src = "https://github.com/NadinHub.png";
 
 //   // document.getElementById("profile-image").setAttribute('src', "https://github.com/NadinHub.png");
 //   document.getElementById("profile-image").scr = "https://github.com/NadinHub.png";
+
+// ------------ About ------------
 
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.querySelector('#next');
