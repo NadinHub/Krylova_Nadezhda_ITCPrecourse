@@ -36,7 +36,20 @@ body {
     justify-content: center;
     margin: 50px;
     padding: 50px;
+    animation-name: cc;
+    animation-direction: 4s;
 }
+.card:hover {
+    -webkit-box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 1);
+    -moz-box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 1);
+}
+
+@keyframes cc {
+    from {border: none;}
+    to {border: 2px solid rgb(5, 5, 5)}
+}
+
 /* The navbar container */
 nav {
     margin: 0 auto;
@@ -107,6 +120,7 @@ nav a:hover {
     padding-top: 80px;
     min-width: 504px;
 }
+
 .profile-image {
     background-color: black;
     border-radius: 50%;
@@ -115,6 +129,15 @@ nav a:hover {
     height: 180px;
     margin: 50px;
     width: 180px;
+}
+a:link {
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+a:hover {
+    color: red;
 }
 
 /* footer*/

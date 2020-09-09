@@ -28,7 +28,7 @@
         <div class="page-wrapper-contact">
             <h2>Contact</h2>
             <div class="contact-wrapper">
-                <form id="frm1" class="contact-form" method="POST">
+                <form id="frm1" action="" class="contact-form" method="POST">
                     <!-- <input type="hidden" name="send_to" value="nadezhda.krylova@gmail.com"> -->
                     <fieldset>
                         <legend>Contact form</legend>
@@ -98,8 +98,6 @@
                     <button 
                     class="button button-form" 
                     type="submit" disabled>
-                    <!-- onload="buttonDis()"> -->
-                    <!-- onclick="showInConsole()" -->
                     Submit
                     </button>
 
@@ -148,8 +146,18 @@
                         </a>
                     </li>
                 </ul>
-                <div class="footer_text">&#169; Israel Tech Challenge</div>
+                <div class="footer_text">
+                    <a href="index.html" alt="Main">Home</a>
+                    <a class="nav__middle-buttom" href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div>
+                    <div id="12">
+                    </div>
+                    &#169; Israel Tech Challenge        
+                </div>
             </div>
+
         </footer>
         <script src="portfolio.js"></script>
     </body>
