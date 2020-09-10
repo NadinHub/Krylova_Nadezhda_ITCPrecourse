@@ -1,5 +1,5 @@
+// ---------------- Main CARD --------------------
 const GITHUB_URL = "https://api.github.com/users/NadinHub";
-
 fetch(GITHUB_URL)
   .then(function(response) {
     console.log(response);
@@ -14,37 +14,6 @@ fetch(GITHUB_URL)
   profileName.innerText = data.name;
   profileLink.href = data.html_url;
   });
-
-  // const profileName = document.getElementById ("my-name");
-  // document.createElement('h1')
-  // profileName.h1 = data.name_url;
-  // });
-
-// function fOnMouse() {
-//   const card1 = document.getElementById("card-wrapper");
-//   card1.addEventListener(onmouseover,fOnMouse)
-
-
-
-
-//inner.HTML мы можем выставить другие тэги
-//inner.Text можем вставить только текст
-// method2---------------
-// const arr1 = ["HTML", " CSS", " JavaScript"]
-// const sentence = document.getElementById('sentence')
-// let arrLast = arr1.pop()
-// sentence.textContent = `This page was built using: ${arr1} and ${arrLast}`
-// -----------------------------
-//method 3
-// const arr1 = [ "HTML", " CSS", " JavaScript"]
-// const 
-
-//   // const profileImage = document.getElementById("profile-image");
-//   // profileImage.src = "https://github.com/NadinHub.png";
-
-//   // document.getElementById("profile-image").setAttribute('src', "https://github.com/NadinHub.png");
-//   document.getElementById("profile-image").scr = "https://github.com/NadinHub.png";
-
 // ------------ About ------------
 
 const prevBtn = document.getElementById('prev');
@@ -55,6 +24,7 @@ let mapGal = [
  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190029.0177344275!2d12.395913379380191!3d41.90998597307767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2sRome%2C%20Metropolitan%20City%20of%20Rome%2C%20Italy!5e0!3m2!1sen!2sru!4v1598695083348!5m2!1sen!2sru'
 ];
 let i = 0;
+makeFooter();
 function FunctionNext() {
   if (i<2) {i++}
   prevBtn.disabled = false;
@@ -74,30 +44,7 @@ prevBtn.addEventListener('click', function() {
   prevBtn.disabled = true;
   }
 });
-// function showPrevMap() {
-//   document.getElementById('map').src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190029.0177344275!2d12.395913379380191!3d41.90998597307767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2sRome%2C%20Metropolitan%20City%20of%20Rome%2C%20Italy!5e0!3m2!1sen!2sru!4v1598695083348!5m2!1sen!2sru';
-//   document.getElementById('prev').style.display = 'none';
-//   document.getElementById('next').style.display = 'inline-block';}
-
-// function showNextMap() {
-//   document.getElementById('map').src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.2740921501!2d-118.69192352053744!3d34.020161299625855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sru!4v1598693830181!5m2!1sen!2sru';
-//   document.getElementById('prev').removeAttribute ('disabled');
-// document.getElementById('prev').style.display = 'inline-block'; }
-
-// function showMoscow() {
-//   document.getElementById('map').src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577336.7617527427!2d36.82516238321753!3d55.58074822793288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2sMoscow%2C%20Russia!5e0!3m2!1sen!2sus!4v1597502484149!5m2!1sen!2sus';
-// }
-
-// const firstName = firstName
-// function showInConsole() {
-//   console.log(firstName + lastName);
-// }
-
-// document.querySelector ('button').onclick = () => {
-//   console.log(document.querySelector('#firstname').value);
-// }
-
-//------------ CONTACT form --------------
+//------------ Contact form --------------
 let firstName = document.querySelector('#firstname'); //input
 let lastName = document.querySelector('#lastname'); //input
 let email = document.querySelector('#email');
@@ -114,31 +61,13 @@ button1.onclick = function() {
   console.log('Email: ' + email.value);
   console.log('Phone number: ' + phone.value);
   console.log('Comment: ' + commentTex.value);
-};
+}
 function checkParams() {
   if (firstName.value.length != 0 && email.value.length >=3 && phone.value.length >=3 && commentTex.value.length != 0)
-  button1.removeAttribute('disabled')
+  button1.removeAttribute('disabled') ;
   };
-
-// // -------------  In CLASS CONTACT FORM -----------------
-  // const formInputs = document.getElementsByClassName('formInput');
-  // document.getElementById('contactForm').addEventListener('submit', onSubmit);
-  // function onSubmit(event) {
-  //   event.prevventDefault();
-  //   // console.log(formInputs);
-  //   let sentence = "";
-  //   for(let i = 0; i < formInputs.length; i++) {
-  //     let label = document.querySelector("label[for='" + formInputs[i].id + "']").innerText;
-  //     let val = formInputs[i].value;
-  //     sentence += label + ': ' + val + ', ';
-
-//  else {
-//   button.attributes('disabled', 'disabled');
-//  }
-// }
-
-
-// // --------------- FOOTER -------------
+// --------------- FOOTER -------------
+function makeFooter() {
 const tech = ["HTML", "CSS", "JavaScript"];
 let sentence = "This page built using: ";
 const and = "and ";
@@ -156,3 +85,4 @@ tech.forEach(function(name1,index) {
 });
 console.log(sentence);
 document.getElementById('12').innerHTML = sentence;
+};
